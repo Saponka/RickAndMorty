@@ -1,0 +1,6 @@
+.contenedor{
+    display: grid;
+    /* grid-template-rows: 26rem; */
+    grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
+    margin-top: 80px;
+}

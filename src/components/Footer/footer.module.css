@@ -1,0 +1,24 @@
+.div{
+    border: 3px solid #06f606;
+    height: 130px;
+}
+
+
+.ul{
+    background-color: black;
+    color: aqua;
+    width: -webkit-fill-available;
+    height: 125px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+
+}
+.ul li a{
+    text-decoration: none;
+    color: aqua;
+}
+.ul li a:hover{
+color: #06f606;
+}

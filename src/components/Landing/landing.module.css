@@ -1,0 +1,31 @@
+.container{
+    
+    display: grid;
+    grid-template-rows: 700px;
+    grid-template-columns: 400px 1fr;
+    width: fit-content;
+    background-color: black;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+ /* position: absolute;
+    top: 40%;
+    left: 40%; */
+
+.btn{
+    border: 1px solid #03edff;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: unset;
+    color: #03edff;
+    cursor: pointer;
+    font-family: 'Press Start 2P';
+} 
+.btn:hover{
+    border: 1px solid #3eff03;
+    color: #3eff03;
+}

@@ -1,0 +1,24 @@
+
+
+.carta{
+    align-items: center;
+    margin: auto;
+    margin-bottom: 80px;
+    width: 320px;
+}
+.carta2{
+   
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+    width: 500px;
+}
+/* button atras */
+.back{
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+}
+.back:hover{
+    color: aqua;
+}
