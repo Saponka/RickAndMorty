@@ -1,17 +1,25 @@
-
-
 .carta{
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+     background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     align-items: center;
     margin: auto;
     margin-bottom: 80px;
     width: 320px;
+    font-family: "Creepster";
 }
 .carta2{
-   
     align-items: center;
     margin: auto;
     margin-bottom: 20px;
     width: 500px;
+}
+.contenedor{
+    background: #11998e;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+    height:760px
 }
 /* button atras */
 .back{
@@ -20,5 +28,5 @@
     font-size: 40px;
 }
 .back:hover{
-    color: aqua;
+    color: rgb(255, 60, 0);
 }

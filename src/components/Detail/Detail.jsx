@@ -19,9 +19,41 @@ export default function Detail(){
 
     return (
       <>
-    <div style={{backgroundColor:"green"}} >
+    <div className='contenedor'  >
       <br/>
-      <Card  className=" carta2 bg-dark text-light " >
+      <img src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt=""   width={"250"}  />
+     
+      <div className="card  mb-3 tarjeta"  >
+  <div className="row g-0">
+    <div className="col-md-6">
+      { detalle.status === "Alive"? <span  className='badge rounded-pill text-bg-success' style={{"position":"absolute","marginTop":"5px"}}>{detalle.status}</span> : <span className='badge rounded-pill text-bg-danger' style={{"position":"absolute","marginTop":"5px"}}>{detalle.status}</span>}
+      <img style={{"width": "400px"}} src={detalle.image ? detalle.image : detalle.name} /* className="img-fluid rounded-start" */ alt="..."/>
+    </div>
+    <div className="col-md-4">
+      <div className="card-body" style={{"margin-top":"10%","font-family":'Creepster'}}>
+        <h5 className="card-title font">Name: {detalle.name}</h5>
+        <h5 className="card-title">Species: {detalle.species}</h5>
+        <h5 className="card-title">Gender: {detalle.gender}</h5>
+        <h5 className="card-title">Origin: {detalle?.origin?.name}</h5>
+        <h5 className="card-text">Location: {detalle?.location?.name}</h5>
+        <h5 className="card-text">Status: {detalle.status}</h5>
+        <h5 className="card-text">Type: {detalle.type ? detalle.type : "Unknow"}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <hr/>
+        <a className='back' href='/home'> Back to Cards </a>
+      
+      </div>
+      </>
+    )
+} 
+ {/* <Card  className=" carta2 bg-dark text-light " >
       <Card.Img  src={detalle.image ? detalle.image : detalle.name} alt="imagen" />
       <Card.Body>
       <Card.Title>Name: {detalle.name} </Card.Title>
@@ -32,46 +64,5 @@ export default function Detail(){
       <Card.Title>Gender: {detalle.gender}</Card.Title>
       <Card.Title>Type: {detalle.type ? detalle.type : "Unknow"}</Card.Title> 
       </Card.Body>
-      </Card>
-      
-        <a className='back' href='/home'> Back to Cards </a>
-      
-      </div>
-      </>
-    )
-} 
+      </Card> */}
 
-/* <Card.Body>
-          <Card.Title>Nombre: {personaje.name}</Card.Title>
-          <Card.Title>Especie: {personaje.species}</Card.Title>
-          <Card.Title>Status: {personaje.status}</Card.Title>
-          <Card.Title>Tipo: {personaje.type}</Card.Title>
-          <Card.Title>Genero: {personaje.gender}</Card.Title>
-          <Card.Title>Origen: {personaje.origin.name}</Card.Title>
-          <Card.Title>location: {personaje.location.name}</Card.Title>
-         
-        </Card.Body> */
-//export default  connect (null,{getById})(Detail);
-//export default connect(null,{getById})(Detail);
-
-/* class Detail extends React.Component {
-  constructor(props){
-    super(props);
-   
-  }
-componentDidMount(){
-    console.log(this.props);
-   const id = this.props.match.params.id;
-    console.log("el id es : " ,id);
-}
-
-  render() {
-    return (
-      <div>
-        hello detail
-      </div>
-    )
-  }
-}
-
-export default Detail */

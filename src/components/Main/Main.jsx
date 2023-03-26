@@ -14,23 +14,25 @@ function Main( ){
   
   useEffect(()=>{
     dispatch( getAll());
-    },[dispatch]);
+    },[dispatch,]);
 
   return (
-    <div  style={{backgroundColor:"green"}}>
+    <div  className={styles.fondo} style={{backgroundColor:"green"}}>
       <Nav/>
      <br/>
-     <Pagination/> 
+     <Pagination /> 
      <div className={styles.contenedor}>
-      {allCharacters?.map((vg,id) => {
+      {  
+       allCharacters?.map((vg,id) => {
               return (
                 <Character
-                  key={id}
+                  key={id} 
                   id={vg.id} 
                   name={vg.name}
                   image={vg.image}
                   location={vg.location}
                   origin={vg.origin}
+                  status={vg.status}
                 />
                 );
               })
@@ -39,8 +41,7 @@ function Main( ){
             <Pagination/> 
             <br/>
             <Footer/> 
-    </div>
-    
+    </div>   
   )
 }
 export default Main;
