@@ -23,7 +23,7 @@ export default function Detail(){
       <br/>
       <img src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt=""   width={"250"}  />
      
-      <div className="card  mb-3 tarjeta"  >
+      <div className="card bg-black text-light mb-3 tarjeta"  >
   <div className="row g-0">
     <div className="col-md-6">
       { detalle.status === "Alive"? <span  className='badge rounded-pill text-bg-success' style={{"position":"absolute","marginTop":"5px"}}>{detalle.status}</span> : <span className='badge rounded-pill text-bg-danger' style={{"position":"absolute","marginTop":"5px"}}>{detalle.status}</span>}
