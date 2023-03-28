@@ -22,21 +22,22 @@ export default function Detail(){
     <div className='contenedor'  >
       <br/>
       <img src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com" alt=""   width={"250"}  />
-     
-      <div className="card bg-black text-light mb-3 tarjeta"  >
+      <br/>
+      <br/>
+      <div className="card tarjeta mb-3 "  >
   <div className="row g-0">
     <div className="col-md-6">
-      { detalle.status === "Alive"? <span  className='badge rounded-pill text-bg-success' style={{"position":"absolute","marginTop":"5px"}}>{detalle.status}</span> : <span className='badge rounded-pill text-bg-danger' style={{"position":"absolute","marginTop":"5px"}}>{detalle.status}</span>}
+     
       <img style={{"width": "400px"}} src={detalle.image ? detalle.image : detalle.name} /* className="img-fluid rounded-start" */ alt="..."/>
     </div>
-    <div className="col-md-4">
+    <div className="col-md-3">
       <div className="card-body" style={{"margin-top":"10%","font-family":'Creepster'}}>
         <h5 className="card-title font">Name: {detalle.name}</h5>
         <h5 className="card-title">Species: {detalle.species}</h5>
         <h5 className="card-title">Gender: {detalle.gender}</h5>
         <h5 className="card-title">Origin: {detalle?.origin?.name}</h5>
         <h5 className="card-text">Location: {detalle?.location?.name}</h5>
-        <h5 className="card-text">Status: {detalle.status}</h5>
+        <h5 className="card-text">Status: { detalle.status === "Alive"? <span  className='badge rounded-pill text-bg-success' style={{"position":"absolute"}}> {detalle.status}</span> : <span className='badge rounded-pill text-dark bg-danger' style={{"position":"absolute"}}>{detalle.status}</span>}</h5>
         <h5 className="card-text">Type: {detalle.type ? detalle.type : "Unknow"}</h5>
       </div>
     </div>

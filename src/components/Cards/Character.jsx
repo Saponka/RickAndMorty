@@ -7,7 +7,7 @@ const Character = ({id,image,name,status}) => {
  
       <Card  className=" carta  text-light"  >
       <Link to={`/detail/${id}`} style={{marginTop:"30px"}}>
-      { status === "Alive"?<span  className='badge rounded-pill text-bg-success' style={{"position":"absolute","marginTop":"5px"}}>{status}</span> : <span className='badge rounded-pill text-bg-danger' style={{"position":"absolute","marginTop":"5px"}}>{status}</span>}
+      { status === "Alive"?<span  className='badge rounded-pill status text-dark bg-success' >{status}</span> : <span className='badge rounded-pill  status text-dark bg-danger'>{status}</span>}
       <Card.Img  src={image} alt={name} />
       </Link>
       <Card.Body>
