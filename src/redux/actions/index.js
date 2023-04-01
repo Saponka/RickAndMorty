@@ -57,11 +57,11 @@ export function getByName(nombre){
 
 //pagination
 
- export function getPagination(page){
+ export function getPagination(){
   
     return async function (dispatch) {
         try{
-          let pagination =  await axios.get(`https://rickandmortyapi.com/api/character?page=${page}`);
+          let pagination =  await axios.get(`https://rickandmortyapi.com/api/character`);
          return dispatch({
                 type:PAGINATION,
                 payload: pagination.data.info,
