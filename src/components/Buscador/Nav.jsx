@@ -21,7 +21,7 @@ function Buscador() {
   }
   return (
     <Navbar expand="lg">
-      <Container fluid className="d-flex  flex-direction-column">
+      <Container fluid className=" flex-column">
         <Navbar.Brand className="text-light" href="/">
           <img
             src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com"
