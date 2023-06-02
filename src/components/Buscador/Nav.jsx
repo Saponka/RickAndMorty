@@ -2,23 +2,42 @@ import React, { useState } from "react";
 import { Button, Container, Form, FormControl, Navbar } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { getByName, getAll } from "../../redux/actions/index";
+import { useEffect } from "react";
 
-function Buscador() {
-  const [text, setText] = useState("");
+const Buscador = ()=> {
+
   const dispatch = useDispatch();
+  const [text, setText] = useState(' ');
 
+ 
+  console.log(text);
+  
+  function handleChange(e) {
+    e.preventDefault();
+    setText(e.target.value);
+    console.log(e.target.value);
+  }
+  
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch(getByName(text));
-    console.log(text);
-  }
-  function handleChange(e) {
-    setText(e.target.value);
-  }
+    if(text){
+      dispatch(getByName(text));
+      setText('');
+      }else{
+       alert('Por favor coloca el nombre de un VideoGame para buscar')
+       setText('');  
+      }
+     console.log(text);
+   }
+
   function reset() {
     dispatch(getAll());
-    setText(" ");
+    
   }
+  useEffect(()=>{
+    dispatch(getByName(text))
+  },[]);
+
   return (
     <Navbar expand="lg">
       <Container fluid className=" flex-column">
@@ -35,6 +54,7 @@ function Buscador() {
           </Button>
           <FormControl
             type="text"
+            value={text}
             onChange={handleChange}
             placeholder="Search"
             className="me-2"
@@ -48,4 +68,5 @@ function Buscador() {
     </Navbar>
   );
 }
+
 export default Buscador;
