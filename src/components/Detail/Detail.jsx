@@ -38,7 +38,7 @@ export default function Detail() {
             <div className="col-md-3">
               <div
                 className="card-body"
-                style={{ "margin-top": "10%", "font-family": "Creepster" }}
+                style={{ "marginTop": "10%", "fontFamily": "Creepster" }}
               >
                 <h5 className="card-title font">Name: {detalle.name}</h5>
                 <h5 className="card-title">Species: {detalle.species}</h5>
