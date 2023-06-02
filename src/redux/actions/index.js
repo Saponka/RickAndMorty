@@ -13,7 +13,7 @@ export function getAll() {
     return async function(dispatch){
         try{
 
-          let todos =  await  axios(urlBase);
+          let todos =  await  axios.get(urlBase);
           return dispatch({
                 type:GET_ALL_CHARACTERS, 
                 payload: todos.data.results,
@@ -39,15 +39,15 @@ export function getById(id){
     }
 };
 
-export function getByName(nombre){
+export const getByName = (name) =>{
 
     return async function (dispatch){
 
         try{
-           let name = await  axios(`${urlBase}/?name=${nombre}`);
+           let nombre = await  axios.get(`https://rickandmortyapi.com/api/character/?name=${name}`);
            return dispatch({
                 type:SEARCH,
-                payload: name.data.results,
+                payload: nombre.data.results,
             });
         }catch(error){
           return console.log("No se encuentra el nombre del personaje")
