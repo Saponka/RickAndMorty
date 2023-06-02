@@ -5,22 +5,33 @@ import styles from "../Main/main.module.css"
 import Pagination from "../Buscador/Pagination";
 import Footer from '../Footer/Footer';
 import {urlBase} from '../../utils';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAll } from '../../redux/actions';
 
 function Main() {
+
   //states
-  const [character, setCharacters] = useState([]);
+  const dispatch = useDispatch();
+  const character = useSelector((state)=>state.showCharacters);
   const [info, setInfo] = useState({});
+  //const [character, setCharacters] = useState([]);
+
   //fecth function
   const fetchCharacters = (url) => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setCharacters(data.results);
+        //setCharacters(data.results);
         setInfo(data.info);
       })
       .catch((error) => console.log(error));
   };
-  //paginacion funciones de botones
+  //useEffect
+ /*  useEffect(() => {
+    fetchCharacters(urlBase);
+  }, []); */
+
+  //paginacion funciones de botones(uso el info)
   const onPrevius = () => {
     fetchCharacters(info.prev);
   };
@@ -28,9 +39,9 @@ function Main() {
     fetchCharacters(info.next);
   };
   //useEffect
-  useEffect(() => {
-    fetchCharacters(urlBase);
-  }, []);
+  useEffect(()=>{
+    dispatch(getAll())
+  },[]);
 
   return (
     <div className={styles.fondo} style={{ backgroundColor: "green" }}>
