@@ -34,6 +34,11 @@ export default function Detail() {
                 src={detalle.image ? detalle.image : detalle.name}
                 alt="..."
               />
+              <div>
+              <a className="back" href="/home">
+          Back to Cards
+        </a>
+              </div>
             </div>
             <div className="col-md-3">
               <div
@@ -74,13 +79,9 @@ export default function Detail() {
           </div>
         </div>
         <br />
-        <br />
-        <br />
-        <br />
+        
         <hr />
-        <a className="back" href="/home">
-          Back to Cards
-        </a>
+        
       </div>
     </>
   );

@@ -38,9 +38,10 @@ function Main() {
   const onNext = () => {
     fetchCharacters(info.next);
   };
-  //useEffect
+  
   useEffect(()=>{
-    dispatch(getAll())
+    dispatch(getAll());
+    //fetchCharacters(urlBase)
   },[]);
 
   return (
