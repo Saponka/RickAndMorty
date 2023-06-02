@@ -31,7 +31,7 @@ export default function Detail() {
           <div className="row g-0">
             <div className="col-md-6">
               <img
-                style={{ width: "400px" }}
+                style={{ width: "400px",borderRadius:"15px",marginTop:"10px" }}
                 src={detalle.image ? detalle.image : detalle.name}
                 alt="..."
               />
