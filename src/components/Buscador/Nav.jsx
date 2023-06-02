@@ -3,6 +3,8 @@ import { Button, Container, Form, FormControl, Navbar } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 import { getByName, getAll } from "../../redux/actions/index";
 import { useEffect } from "react";
+import 'animate.css';
+const Swal = require('sweetalert2');
 
 const Buscador = ()=> {
 
@@ -24,7 +26,16 @@ const Buscador = ()=> {
       dispatch(getByName(text));
       setText('');
       }else{
-       alert('Por favor coloca el nombre de un VideoGame para buscar')
+        Swal.fire({
+          position: 'top',
+          icon: 'question',
+          title: 'Oh geez',
+          text:'Por favor coloca el nombre de un VideoGame para buscar',
+          showConfirmButton: true,
+          confirmButtonText: 'Ok',
+         /*  timer: 4500 */
+        })
+      
        setText('');  
       }
      console.log(text);
@@ -46,6 +57,7 @@ const Buscador = ()=> {
             src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com"
             alt=""
             width={"280"}
+            className="animate__animated animate__pulse animate__slower animate__infinite	"
           />
         </Navbar.Brand>
         <Form className="d-flex" onSubmit={handleSubmit}>

@@ -5,8 +5,9 @@ import {urlBase} from '../../utils';
 export const GET_ALL_CHARACTERS = "GET_ALL_CHARACTERS";
 export const SEARCH = "SEARCH";
 export const GET_DETAIL = "GET_DETAIL";
-
 export const PAGINATION = "PAGINATION";
+
+
 
 export function getAll() {
     
@@ -50,7 +51,7 @@ export const getByName = (name) =>{
                 payload: nombre.data.results,
             });
         }catch(error){
-          return console.log("No se encuentra el nombre del personaje")
+          return   console.log("No se encuentra el nombre del personaje")
         }
     }
 }

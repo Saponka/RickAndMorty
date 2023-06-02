@@ -23,6 +23,7 @@ export default function Detail() {
           src="https://hbomax-images.warnermediacdn.com/2022-08/tt.png?host=wme-hbomax-drupal-prod.s3.amazonaws.com"
           alt=""
           width={"250"}
+          className="animate__animated animate__pulse animate__slower animate__infinite	"
         />
         <br />
         <br />
@@ -35,8 +36,11 @@ export default function Detail() {
                 alt="..."
               />
               <div>
-              <a className="back" href="/home">
-          Back to Cards
+              <a className="back animate__animated animate__pulse  animate__slow animate__infinite mt-2 mb-2	 btn btn-success " href="/home">
+                
+                Back to Cards
+             
+          
         </a>
               </div>
             </div>
